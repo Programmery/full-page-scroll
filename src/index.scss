@@ -1,0 +1,106 @@
+@use './styles/variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+html,
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+}
+
+html {
+  font-family: v.$text-font;
+  font-size: v.$font-size-base;
+}
+
+@media screen and (max-width: v.$mobile-width) {
+  html {
+    font-size: v.$font-size-mobile-m;
+  }
+}
+
+@media screen and (max-width: v.$mobile-width) and (max-height: v.$font-m-bp-height) {
+  html {
+    font-size: v.$font-size-base-mobile;
+  }
+}
+
+body {
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 1rem; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/** 
+ * Button
+*/
+button {
+  color: unset;
+  text-shadow: none;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  font: inherit;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-width: 0;
+  border-color: unset;
+}
+
+li {
+  list-style: none;
+}

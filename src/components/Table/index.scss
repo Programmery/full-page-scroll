@@ -1,0 +1,29 @@
+@use '../../styles/variables' as v;
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  thead,
+  tr:not(:last-of-type) {
+    border-bottom: 1px solid white;
+  }
+  th {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  td,
+  th {
+    text-align: center;
+  }
+
+  @media screen and (min-width: v.$mobile-width) {
+    td,
+    th {
+      text-align: center;
+      padding: 0.4em 0;
+    }
+  }
+}

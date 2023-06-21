@@ -1,0 +1,47 @@
+@use '../../../styles/variables.scss' as v;
+
+$button-color: #fa7f72;
+$hover-color: lighten($button-color, 5%);
+
+.button {
+  user-select: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25px;
+  padding: 2px 17px;
+  border-radius: 15px;
+  // TODO:
+  font-size: v.$font-size-m;
+  color: white;
+  // box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+  background-color: $button-color;
+
+  &._size_m {
+    min-height: 25px;
+    padding: 2px 17px;
+  }
+
+  &._size_l {
+    min-height: 33px;
+    padding: 0 2em;
+  }
+
+  &:not(._is-touch):hover {
+    background-color: $hover-color;
+  }
+  &__title {
+    transition: transform 50ms ease-out;
+  }
+  &:active &__title {
+    transform: scale(0.9);
+  }
+
+  @media screen and (max-width: v.$mobile-width) {
+    & {
+      border-radius: 5px;
+      // font-size: v.$font-size-base;
+    }
+  }
+}

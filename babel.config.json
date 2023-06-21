@@ -1,0 +1,25 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": 10
+                }
+            }
+        ],
+        [
+            "import",
+            {
+                "libraryName": "react-use",
+                "libraryDirectory": "lib",
+                "camel2DashComponentName": false
+            }
+        ],
+        "@babel/preset-react",
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties"
+    ]
+}

@@ -1,0 +1,24 @@
+@use '../../styles/variables.scss' as v;
+.app {
+  &__header {
+    user-select: none;
+    position: fixed;
+    background-color: rgba(#ebebeb, 0.9);
+    z-index: v.$z-index-header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: v.$header-height;
+    box-shadow: 0 -2px 8px 0 rgb(0 0 0 / 10%);
+  }
+
+  &__website-title {
+    font-family: v.$main-title-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: v.$font-size-xl;
+  }
+}

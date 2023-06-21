@@ -1,0 +1,10 @@
+.generic-svg {
+  display: block;
+
+  // https://stackoverflow.com/questions/35041903/ms-edge-cant-detect-delegated-events-for-use-svg-elements
+  // https://stackoverflow.com/questions/29932780/what-would-cause-click-events-to-stop-working-in-internet-explorer-11
+
+  &__use {
+    pointer-events: none;
+  }
+}

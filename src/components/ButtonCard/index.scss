@@ -1,0 +1,65 @@
+@use '../../styles/variables' as v;
+
+.button-card {
+  width: 100%;
+  min-width: 100px;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 280px;
+  max-height: 250px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 70%;
+  }
+
+  &__item:not(:first-of-type) {
+    margin-top: 1%;
+  }
+
+  &__item {
+    text-align: center;
+
+    &._pre-title {
+      font-size: v.$font-size-xm;
+    }
+    &._title {
+      font-size: v.$font-size-l;
+      font-weight: bold;
+    }
+    &._subtitle {
+      color: v.$nav-link-color;
+    }
+  }
+
+  &__button {
+    margin-top: 6px;
+    flex-basis: 45px;
+  }
+
+  @media screen and (max-width: v.$mobile-width) {
+    & {
+      border-radius: 10px;
+      padding: 3%;
+    }
+
+    &__button {
+      flex-basis: 25%;
+    }
+  }
+}

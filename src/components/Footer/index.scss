@@ -1,0 +1,65 @@
+@use '../../styles/variables.scss' as v;
+
+$b: 'footer';
+
+.#{$b} {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  &__menu {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__text {
+    text-decoration: none;
+    color: v.$nav-link-color;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border-bottom: 2px transparent solid;
+    transition: border-color 0.3s ease;
+  }
+
+  &__item {
+    pointer-events: all;
+    user-select: none;
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: v.$font-size-m;
+
+    &._is-active {
+      cursor: default;
+      & .#{$b}__text {
+        color: v.$nav-active-link-color;
+        border-color: v.$nav-link-color;
+      }
+    }
+  }
+
+  &:not(._is-touch) &__item:hover .#{$b}__text {
+    border-color: v.$nav-link-color;
+  }
+
+  &:not(._is-touch) &__menu:hover &__item_is-active &__text {
+    border-color: transparent;
+    &:hover {
+      border-color: v.$nav-link-color;
+    }
+  }
+  &:not(._is-touch) &__menu:hover &__item_is-active:hover &__text {
+    border-color: v.$nav-link-color;
+  }
+}

@@ -1,0 +1,32 @@
+// sizes
+$px-s: 8px;
+$px-m: 14px;
+$header-height: 55px;
+
+// paddings margins
+$padding-button: 0.8em;
+
+// fonts
+$font-size-base: 20px;
+$font-size-mobile-m: 17px;
+$font-size-base-mobile: 14px;
+$font-size-m: 1.1rem;
+$font-size-xm: 1.2rem;
+$font-size-l: 1.4rem;
+$font-size-xl: 1.6rem;
+$font-size-xxl: 2.3rem;
+$main-title-font: 'Roboto Condensed', sans-serif;
+$text-font: 'Roboto Condensed', sans-serif;
+
+// z-indexes
+$z-index-header: 2;
+
+// colors
+$header-background-color: rgba(#ebebeb, 0.9);
+$nav-link-color: rgba(black, 0.7);
+$nav-active-link-color: rgba(black, 0.6);
+
+// media queries
+$mobile-width: 560px;
+$font-m-bp-height: 680px;
+$smallest-screen-height: 390px;

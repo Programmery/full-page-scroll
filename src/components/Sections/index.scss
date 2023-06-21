@@ -1,0 +1,75 @@
+@use '../../styles/variables.scss' as v;
+
+.section {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 55px 2px 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__content-container {
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+
+    &._full-height {
+      flex-basis: 100%;
+    }
+  }
+
+  &._full-width &__content-container {
+    max-width: 100vw;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 1%;
+    flex-basis: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: v.$font-size-xxl;
+    font-weight: bold;
+  }
+
+  &__description {
+    text-align: center;
+    padding: 0 30px 3%;
+  }
+
+  @media screen and (max-height: v.$smallest-screen-height) {
+    &__title,
+    &__description {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: v.$mobile-width) {
+    &__description {
+      text-align: center;
+      padding-bottom: 3%;
+    }
+
+    &__content-container {
+      flex-basis: 100%;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &:not(._full-width) &__section-content {
+      flex: 1;
+    }
+  }
+}

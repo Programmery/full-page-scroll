@@ -1,0 +1,273 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "airbnb",
+        "prettier"
+    ],
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "import"
+    ],
+    "rules": {
+        // OWN
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true,
+                "ignorePropertyModificationsForRegex": [
+                    "Ref$"
+                ]
+            }
+        ],
+        // fixing enum declaration bug
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+            "error"
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-key": "error",
+        "consistent-return": "warn",
+        // airbnb
+        // "no-magic-numbers": [
+        //     "warn",
+        //     {
+        //         "ignore": [
+        //             -1,
+        //             0,
+        //             1,
+        //             2,
+        //             5,
+        //             10,
+        //             100,
+        //             200,
+        //             50
+        //         ]
+        //     }
+        // ],
+        // "@typescript-eslint/prefer-includes": "error",
+        "react/jsx-filename-extension": [
+            2,
+            {
+                "extensions": [
+                    ".jsx",
+                    ".tsx"
+                ]
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "react/no-multi-comp": "error",
+        "jsx-quotes": "error",
+        "react/jsx-closing-bracket-location": "error",
+        "react/jsx-closing-tag-location": "error",
+        "no-multi-spaces": "error",
+        "react/jsx-tag-spacing": "error",
+        "react/jsx-curly-spacing": "error",
+        "jsx-a11y/alt-text": "error",
+        "jsx-a11y/aria-role": "error",
+        "react/no-array-index-key": "error",
+        "react/jsx-wrap-multilines": "error",
+        "react/self-closing-comp": "error",
+        "react/require-render-return": "error",
+        // NOT SURE
+        "@typescript-eslint/ban-types": "error",
+        // core
+        "max-len": [
+            "error",
+            {
+                "code": 140
+            }
+        ],
+        "no-global-assign": "error",
+        "no-eq-null": "error",
+        "no-var": "error",
+        "new-cap": "error",
+        "object-shorthand": "error",
+        "array-callback-return": "error",
+        "prefer-destructuring": [
+            "error",
+            {
+                "VariableDeclarator": {
+                    "object": true
+                },
+                "AssignmentExpression": {}
+            },
+            {
+                "enforceForRenamedProperties": false
+            }
+        ],
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowShortCircuit": true,
+                "allowTernary": true
+            }
+        ],
+        "no-eval": "error",
+        "no-implied-eval": "error",
+        "yoda": "error",
+        "wrap-iife": "error",
+        "no-new-func": "error",
+        "no-new-wrappers": "error",
+        "prefer-arrow-callback": "error",
+        "no-restricted-syntax": [
+            "error",
+            "WithStatement"
+        ],
+        "dot-notation": "error",
+        "one-var": [
+            "error",
+            "never"
+        ],
+        "eqeqeq": [
+            "error",
+            "always"
+        ],
+        "eol-last": "error",
+        "no-shadow-restricted-names": "error",
+        "no-label-var": "error",
+        // "no-shadow": "error",
+        "curly": "error",
+        "prefer-template": "error",
+        "no-useless-concat": "error",
+        "no-useless-escape": "error",
+        "prefer-spread": "error",
+        "prefer-rest-params": "error",
+        "prefer-const": "error",
+        "quote-props": "off",
+        "default-case": "off",
+        "no-console": "off",
+        "arrow-body-style": "off",
+        "no-unused-vars": "off",
+        "no-prototype-builtins": "warn",
+        // react
+        "react/prefer-es6-class": "error",
+        "react/prefer-stateless-function": "error",
+        "react/jsx-pascal-case": "error",
+        "react/jsx-fragments": "error",
+        "react/jsx-boolean-value": [
+            "error",
+            "always"
+        ],
+        "react/state-in-constructor": [
+            "error",
+            "never"
+        ],
+        "react/no-unknown-property": [
+            "error",
+            {
+                "ignore": [
+                    "allowtransparency"
+                ]
+            }
+        ],
+        "react/sort-comp": [
+            "error",
+            {
+                "order": [
+                    "defaultProps",
+                    "instance-variables",
+                    "constructor",
+                    "everything-else",
+                    "render"
+                ]
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
+        "react/prop-types": "off",
+        // maybe
+        "react/display-name": "off",
+        // typescript
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/ban-ts-comment": [
+            "error",
+            {
+                "ts-ignore": "allow-with-description"
+            }
+        ],
+        "@typescript-eslint/no-useless-constructor": "error",
+        // maybe
+        "@typescript-eslint/restrict-plus-operands": "off",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "typeParameter",
+                "format": [
+                    "PascalCase"
+                ],
+                "custom": {
+                    "regex": "^[A-Z][A-Za-z]*$",
+                    "match": true
+                }
+            }
+        ],
+        // maybe
+        "@typescript-eslint/prefer-interface": "off",
+        "@typescript-eslint/no-explicit-any": [
+            "error",
+            {
+                "ignoreRestArgs": false
+            }
+        ],
+        "@typescript-eslint/prefer-namespace-keyword": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/array-type": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "no-use-before-define": "off",
+        // errors with pnpm, plug-ins should have absolute paths
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        // import
+        "import/no-duplicates": "error",
+        "import/no-mutable-exports": "error",
+        "import/first": "error",
+        "import/no-webpack-loader-syntax": "error"
+    }
+}
