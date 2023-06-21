@@ -1,4 +1,6 @@
 /* eslint-disable */
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 const path = require('path');
 const common = require('./webpack.common');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
